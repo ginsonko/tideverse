@@ -1,0 +1,60 @@
+name: Deploy site to GitHub Pages
+
+# Publishes site/ at https://ginsonko.github.io/tideverse/ and the app's update feed at
+# https://ginsonko.github.io/tideverse/update/omni-update-tideverse.json (one of the TideVerse edition's updateFeeds).
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'site/**'
+      - 'update/**'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Static checks (brand strings, links, config schema)
+        run: node scripts/check-site.mjs --static
+
+      - name: Assemble Pages artifact (site/ + update feed)
+        run: |
+          set -euo pipefail
+          rm -rf _pages
+          cp -R site _pages
+          mkdir -p _pages/update
+          # Before the first release there is no feed yet; the site goes out on its own.
+          if [ -f update/omni-update-tideverse.json ]; then
+            cp update/omni-update-tideverse.json _pages/update/
+            node -e "const j=require('./_pages/update/omni-update-tideverse.json'); if(j.schema!=='omni-update/1'||!j.version) throw new Error('bad update feed')"
+          fi
+          touch _pages/.nojekyll
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _pages
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
