@@ -12,10 +12,10 @@ window.__OC_CONFIG_FALLBACK__ = {
     "manual_smart": "https://github.com/ginsonko/tideverse/blob/main/docs/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B.md"
   },
   "release": {
-    "version": "0.5.6",
+    "version": "0.5.7",
     "channel": "内测版",
     "date": "2026-10-27",
-    "release_page": "https://github.com/ginsonko/tideverse/releases/tag/v0.5.6",
+    "release_page": "https://github.com/ginsonko/tideverse/releases/tag/v0.5.7",
     "mirror_note": "",
     "assets": {
       "win_setup": {
@@ -23,44 +23,44 @@ window.__OC_CONFIG_FALLBACK__ = {
         "note": "推荐。可以和其他版本装在同一台电脑上，数据互不影响；有新版本时在软件里点「立即更新」即可。",
         "os": "windows",
         "arch": "x64",
-        "file": "OmniCreator-TideVerse-0.5.6-Setup.exe",
-        "url": "https://github.com/ginsonko/tideverse/releases/download/v0.5.6/OmniCreator-TideVerse-0.5.6-Setup.exe",
+        "file": "OmniCreator-TideVerse-0.5.7-Setup.exe",
+        "url": "https://github.com/ginsonko/tideverse/releases/download/v0.5.7/OmniCreator-TideVerse-0.5.7-Setup.exe",
         "mirror": "",
         "size": "292.5 MB",
-        "sha256": "f673ccbc6790b16b4688b3391a18082d7db40ef4e46956650296f55a889f1425"
+        "sha256": "0984ca4758861970ada3d22e5b67934ce1ef4caf7c52e688dfaf3cf7035e0529"
       },
       "win_portable": {
         "label": "Windows 免安装版",
         "note": "不想安装时用。放在任意文件夹或 U 盘，双击即用；第一次启动要先解压，会稍慢。",
         "os": "windows",
         "arch": "x64",
-        "file": "OmniCreator-TideVerse-0.5.6-Portable.exe",
-        "url": "https://github.com/ginsonko/tideverse/releases/download/v0.5.6/OmniCreator-TideVerse-0.5.6-Portable.exe",
+        "file": "OmniCreator-TideVerse-0.5.7-Portable.exe",
+        "url": "https://github.com/ginsonko/tideverse/releases/download/v0.5.7/OmniCreator-TideVerse-0.5.7-Portable.exe",
         "mirror": "",
         "size": "174.1 MB",
-        "sha256": "b2d93e39209a252621fb3c0756c592c75f995446f1f14f2e7f173b7ed67d6fd6"
+        "sha256": "39f476c511273d7f90b39cff161c341ae5045dd32464047ea8670d1dffa7982f"
       },
       "mac_arm64": {
         "label": "macOS Apple 芯片版",
         "note": "M1 / M2 / M3 / M4 等 Apple 芯片的 Mac，需要 macOS 13 及以上。第一次打开要手动放行，见下方「Mac 首次打开」。",
         "os": "mac",
         "arch": "arm64",
-        "file": "OmniCreator-TideVerse-0.5.6-mac-arm64.dmg",
-        "url": "https://github.com/ginsonko/tideverse/releases/download/v0.5.6/OmniCreator-TideVerse-0.5.6-mac-arm64.dmg",
+        "file": "OmniCreator-TideVerse-0.5.7-mac-arm64.dmg",
+        "url": "https://github.com/ginsonko/tideverse/releases/download/v0.5.7/OmniCreator-TideVerse-0.5.7-mac-arm64.dmg",
         "mirror": "",
         "size": "204.0 MB",
-        "sha256": "3e60cd705a26885f7a9d3018b204233e77f5b4a0c9aff338b374531b2194496e"
+        "sha256": "e2379e8b4f8ce6012bba00821dfa628ac626675c6397e9d8f278e1154c66d096"
       },
       "mac_x64": {
         "label": "macOS Intel 版",
         "note": "使用 Intel 处理器的 Mac，需要 macOS 13 及以上。第一次打开要手动放行，见下方「Mac 首次打开」。",
         "os": "mac",
         "arch": "x64",
-        "file": "OmniCreator-TideVerse-0.5.6-mac-x64.dmg",
-        "url": "https://github.com/ginsonko/tideverse/releases/download/v0.5.6/OmniCreator-TideVerse-0.5.6-mac-x64.dmg",
+        "file": "OmniCreator-TideVerse-0.5.7-mac-x64.dmg",
+        "url": "https://github.com/ginsonko/tideverse/releases/download/v0.5.7/OmniCreator-TideVerse-0.5.7-mac-x64.dmg",
         "mirror": "",
         "size": "222.9 MB",
-        "sha256": "68ebd793250e078eb95a07b225682b87067cac0f3c412cf3ded606d685b14ae3"
+        "sha256": "b4e4a44f94a315c1d596fbfbe8e66d5e328922541b153cf95d427877cec84b73"
       }
     }
   },
